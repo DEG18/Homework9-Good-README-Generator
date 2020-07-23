@@ -1,21 +1,21 @@
-# HomeWork 9 Readme Generator 
+# Homework 9: New Readme Generator 
   ## Description:
-  This readme generator works!
+  This Readme Generator using node and javascript to run, user can edit newReadme file by enter "node index.js" in terminal to start and enter their information, after completed the process, user can check the newReadme file!
 
   ## Table of Contents:
-  balabal
+  
 
   ## Installation Instructions:
-  This Readme Generator using CLI App, user will have to use terminal to run this generator
+  Run "node index.js" in terminal, make sure open the terminal in the right folder!
 
   ## Usage Information:
-  users
+  All user can edit the newReadme when they run this in terminal.
 
   ## Contribution Guidelines:
-  undefined
+  Luyu Zeng
 
   ## Test Instructions:
-  undefined
+  node index.js
   
   ## License:
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)

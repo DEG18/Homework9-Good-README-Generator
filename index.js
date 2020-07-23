@@ -99,7 +99,7 @@ function init() {
     response.license = userLislink[0].link;
     console.log(response);
     var editReadme = generateMarkdown(response);
-    writeToFile("newREADME.md", editReadme);
+    writeToFile("README.md", editReadme);
   });
 }
 
