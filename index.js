@@ -16,11 +16,6 @@ const questions = [
   },
   {
     type: "text",
-    message: "Enter Table of Contents: ",
-    name: "contents",
-  },
-  {
-    type: "text",
     message: "Enter Installation: ",
     name: "installation",
   },
@@ -31,7 +26,7 @@ const questions = [
   },
   {
     type: "list",
-    choices: ["MIT", "ex..."],
+    choices: ["MIT", "Apache", "Boost"],
     message: "Choose your License: ",
     name: "license",
   },
@@ -65,9 +60,14 @@ const license = [
       "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)",
   },
   {
-    name: "MIT",
+    name: "Apache",
     link:
-      "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)",
+      "![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)",
+  },
+  {
+    name: "Boost",
+    link:
+      "![License: Boost](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)",
   },
 ];
 
@@ -82,20 +82,10 @@ function writeToFile(fileName, data) {
   });
 }
 
-// function appendToFile(fileName, data) {
-//   fs.appendToFile(fileName, data, function (err) {
-//     if (err) {
-//       return console.log(err);
-//     }
-
-//     console.log("Success!");
-//   });
-// }
-
 // function to initialize program
 function init() {
   inquirer.prompt(questions).then((response) => {
-    var userLislink = license.filter((logo) => logo.name === response.license);
+    var userLislink = license.filter((lice) => lice.name === response.license);
     response.license = userLislink[0].link;
     console.log(response);
     var editReadme = generateMarkdown(response);
