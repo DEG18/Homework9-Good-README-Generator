@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown.js");
 var fs = require("fs");
-const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require("constants");
+
 // array of questions for user
 const questions = [
   {
@@ -89,7 +89,7 @@ function init() {
     response.license = userLislink[0].link;
     console.log(response);
     var editReadme = generateMarkdown(response);
-    writeToFile("README.md", editReadme);
+    // writeToFile("README.md", editReadme);
     writeToFile("newREADME.md", editReadme);
   });
 }
